@@ -1,6 +1,14 @@
 <?php
 
-    public function amazonIngress($GroupId = '', $ips = array(), $ports = array()) {
+    /*
+     * amazonIngress: Works with AWS SDK to open ports.
+     * @param string $groupId // AWS Group ID
+     * @param array $ips // Array of IPs to work on
+     * @param array $ports // Array of ports to work on
+     * @returns void
+     */
+
+    public function amazonIngress(String $groupId = '', array $ips = array(), array $ports = array()) : void {
 
         /*
 
@@ -15,7 +23,7 @@
 
         try {
 
-            if (empty($GroupId)) throw new \Exception('AWS Security Group not specified.');
+            if (empty($groupId)) throw new \Exception('AWS Security Group not specified.');
 
             $remove = array();
             $create = array();
@@ -25,11 +33,11 @@
                 'version' => '2016-11-15'
             ]);
 
-            $describe = $ec2Client->DescribeSecurityGroups(array('GroupId' => $GroupId));
+            $describe = $ec2Client->DescribeSecurityGroups(array('GroupId' => $groupId));
 
             foreach ($describe['SecurityGroups'] as $SecurityGroup) {
 
-                if ($SecurityGroup['GroupId'] === $GroupId) $SecurityGroupArray = $SecurityGroup;
+                if ($SecurityGroup['GroupId'] === $groupId) $SecurityGroupArray = $SecurityGroup;
 
             }
 
