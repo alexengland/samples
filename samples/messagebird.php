@@ -33,12 +33,14 @@
             $sms->recipients = $phone['washed_number'];
             $sms->body = $body;
     
-            try { $smsresult = $messagebird->messages->create($sms);
+            try {
+
+                $smsresult = $messagebird->messages->create($sms);
     
             } catch (\MessageBird\Exceptions\AuthenticateException $e) { // Invalid access key
     
                 $log = "MessageBird Access Key Error thrown by system.";
-                mail('server@mindsystems.com', 'MSP SMS Alert', $log);
+                mail('', 'SMS Alert', $log);
                 return false;
     
             } catch (\MessageBird\Exceptions\BalanceException $e) { // Out of credit
