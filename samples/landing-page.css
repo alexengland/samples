@@ -1,0 +1,409 @@
+@charset "UTF-8";
+
+    /* Animation */
+
+    @keyframes software_screen {
+        0% {
+            bottom: -800px;
+        }
+
+        100% {
+            bottom: -35px;
+        }
+    }
+
+    @-webkit-keyframes software_screen {
+        0% {
+            bottom: -800px;
+        }
+
+        100% {
+            bottom: -35px;
+        }
+    }
+
+    @-webkit-keyframes glass_sheet {
+        0% {
+            opacity:0;
+        }
+
+        100% {
+            opacity:1;
+        }
+    }
+
+    @keyframes glass_sheet {
+        0% {
+            opacity:0;
+        }
+
+        100% {
+            opacity:1;
+        }
+    }
+
+    @-webkit-keyframes blobs {
+        0% {
+            transform:scale(0);
+            -webkit-transform:scale(0);
+        }
+
+        100% {
+            transform:scale(1);
+            -webkit-transform:scale(1);
+        }
+    }
+
+    @keyframes blobs {
+        0% {
+            transform:scale(0);
+        }
+
+        100% {
+            transform:scale(1);
+        }
+    }
+
+    @-webkit-keyframes float {
+        0% {
+            -webkit-transform: translatey(0px);
+        }
+        50% {
+            -webkit-transform: translatey(-20px);
+        }
+        100% {
+            -webkit-transform: translatey(0px);
+        }
+    }
+
+    @keyframes float {
+        0% {
+            transform: translatey(0px);
+        }
+        50% {
+            transform: translatey(-20px);
+        }
+        100% {
+            transform: translatey(0px);
+        }
+    }
+
+    /* Brochure Banner Structure */
+
+    #brochure-banner-home-tickler {
+        position: relative;
+        height: 50px;
+        line-height: 50px;
+        width: 100%;
+        background-color: #e9e9e9;
+        text-align: center;
+        z-index: 999;
+    }
+
+    #brochure-banner-home-1 {
+        font-family: 'exo_2light', Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        width: 100%;
+        height: 700px;
+        margin: -30px 0px 0px 0px;
+        overflow: visible;
+        position: relative;
+        color: #000000;
+        color: var(--black);
+        background-color: #FFFFFF;
+        background-color: var(--white);
+    }
+
+    #brochure-banner-home-1 > div > div h1 {
+        font-size: 38px !important;
+        font-weight: bold !important;
+        margin-left: -1px !important;
+        padding: 0px 0px 20px 0px;
+        margin-bottom: 5px!important;
+    }
+
+    #brochure-banner-home-1 > div > div {
+        width: 100%;
+        padding: 50px 0px 50px 0px;
+        text-align: center;
+    }
+
+    #brochure-banner-home-1 > div > div> div  {
+        width: 60%;
+        margin: 0 auto;
+        padding: 0px 0px 5px 0px;
+    }
+
+    #brochure-banner-home-1 .grey-training-options {
+        color: #747474;
+        width: 48%;
+        padding-top: 5px;
+    }
+
+    #brochure-banner-home-1 #generic_software_screen {
+        width: 100%;
+        position: absolute;
+        -webkit-animation:software_screen forwards 2000ms !important;
+        animation:software_screen forwards 2000ms !important;
+    }
+
+    #brochure-banner-home-1 #glass_sheet {
+        width: 100%;
+        position: absolute;
+        bottom: 35px;
+        opacity: 0;
+        -webkit-animation:glass_sheet forwards 2000ms 2000ms !important;
+        animation:glass_sheet forwards 2000ms 2000ms !important;
+    }
+
+    #brochure-banner-home-1 #grey_blob {
+        width: 190px;
+        position: absolute;
+        left: 35%;
+        bottom: 140px;
+        transform:scale(0);
+        -webkit-transform:scale(0);
+        -webkit-animation:blobs forwards 200ms 3000ms, float 6000ms 3100ms infinite !important;
+        animation:blobs forwards 200ms 3000ms, float 6000ms 3100ms infinite !important;
+    }
+
+    #brochure-banner-home-1 #orange_blob {
+        width: 140px;
+        position: absolute;
+        left: 48%;
+        bottom: 190px;
+        transform:scale(0);
+        -webkit-transform:scale(0);
+        -webkit-animation:blobs forwards 200ms 3200ms, float 6000ms 3300ms ease-in-out infinite !important;
+        animation:blobs forwards 200ms 3200ms, float 6000ms 3300ms ease-in-out infinite !important;
+    }
+
+    #brochure-banner-home-1 #red_blob {
+        width: 120px;
+        position: absolute;
+        left: 48%;
+        bottom: 90px;
+        transform:scale(0);
+        -webkit-transform:scale(0);
+        -webkit-animation:blobs forwards 200ms 3400ms, float 6000ms 3500ms ease-in-out infinite !important;
+        animation:blobs forwards 200ms 3400ms, float 6000ms 3500ms ease-in-out infinite !important;
+    }
+
+    #brochure-banner-home-1 #eye {
+        width: 135px;
+        position: absolute;
+        left: 30%;
+        bottom: 280px;
+        opacity: 0;
+        -webkit-animation:fade forwards 500ms 3600ms, float 6000ms 3700ms infinite !important;
+        animation:fade forwards 500ms 3600ms, float 6000ms 3700ms infinite !important;
+    }
+
+    .container {
+        position: relative;
+        height: 100%;
+        width: 90%;
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+
+    .container input {
+        width: 140px;
+        margin: 15px 0px;
+    }
+
+    #brochure-banner-home-2 {
+        font-family: 'exo_2light', Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        padding: 70px 10px 75px 10px;
+        display: block;
+        color: #FFFFFF;
+        background-color: #000000;
+        font-size: 16px;
+        text-align: center !important;
+    }
+
+    #brochure-banner-home-2 > div > div h2 {
+        font-size: 30px !important;
+        font-weight: bold !important;
+        margin-left: -1px !important;
+        padding: 0px 0px 20px 0px;
+        margin-bottom: 5px!important;
+    }
+
+    #brochure-banner-home-2 .container input {
+        width: 200px;
+        margin: 20px 0px;
+    }
+
+
+    @media all and (min-width: 768px) and (max-width: 849px) {
+
+        #brochure-banner-home-1 > div > div h1 {
+            font-size: 42px !important;
+            font-weight: bold !important;
+            margin-left: -1px !important;
+            padding: 0px 0px 20px 0px;
+            margin-bottom: 5px!important;
+        }
+
+        #brochure-banner-home-1 > div > div {
+            width: 100%;
+            padding: 50px 0px 50px 0px;
+            text-align: center;
+        }
+
+        #brochure-banner-home-1 > div > div> div  {
+            width: 80%;
+            margin: 0 auto;
+            padding: 0px 0px 5px 0px;
+        }
+
+        #brochure-banner-home-1 .grey-training-options {
+            color: #747474;
+            width: 70%;
+            padding-top: 5px;
+        }
+
+    }
+
+    @media all and (min-width: 550px) and (max-width: 768px) {
+
+        #brochure-banner-home-tickler {
+            display: none;
+        }
+
+        #brochure-banner-home-1 > div > div h1 {
+            font-size: 42px !important;
+            font-weight: bold !important;
+            margin-left: -1px !important;
+            padding: 0px 0px 20px 0px;
+            margin-bottom: 5px!important;
+        }
+
+        #brochure-banner-home-1 > div > div {
+            width: 100%;
+            padding: 50px 0px 50px 0px;
+            text-align: center;
+        }
+
+        #brochure-banner-home-1 > div > div> div  {
+            width: 80%;
+            margin: 0 auto;
+            padding: 0px 0px 5px 0px;
+        }
+
+        #brochure-banner-home-1 .grey-training-options {
+            color: #747474;
+            width: 70%;
+            padding-top: 5px;
+        }
+
+    }
+
+    @media all and (min-width: 371px) and (max-width: 549px){
+
+        #brochure-banner-home-tickler {
+            display: none;
+        }
+
+        #brochure-banner-home-1 {
+            height: 630px;
+        }
+
+        #brochure-banner-home-1 > div > div h1 {
+            font-size: 30px !important;
+            font-weight: bold !important;
+            margin-left: -1px !important;
+            padding: 0px 0px 20px 0px;
+            margin-bottom: 5px!important;
+        }
+
+        #brochure-banner-home-1 > div > div {
+            width: 100%;
+            padding: 50px 0px 50px 0px;
+            text-align: center;
+        }
+
+        #brochure-banner-home-1 > div > div> div  {
+            width: 80%;
+            margin: 0 auto;
+            padding: 0px 0px 5px 0px;
+        }
+
+        #brochure-banner-home-1 #generic_software_screen {
+            width: 100%;
+            bottom: 15px;
+        }
+
+        #brochure-banner-home-1 #glass_sheet {
+            width: 100%;
+            bottom: 15px;
+        }
+
+        #brochure-banner-home-1 .grey-training-options {
+            color: #747474;
+            width: 70%;
+            padding-top: 5px;
+        }
+
+        #brochure-banner-home-1 #grey_blob {
+            width: 80px;
+            left: 35%;
+            bottom: 50px;
+        }
+
+        #brochure-banner-home-1 #orange_blob {
+            width: 70px;
+            left: 48%;
+            bottom: 70px;
+        }
+
+        #brochure-banner-home-1 #red_blob {
+            width: 50px;
+            left: 48%;
+            bottom: 40px;
+        }
+
+        #brochure-banner-home-1 #eye {
+            width: 60px;
+            left: 30%;
+            bottom: 100px;
+        }
+
+    }
+
+    @media all and (max-width: 370px) {
+
+        #brochure-banner-home-tickler {
+            display: none;
+        }
+
+        #brochure-banner-home-1 #glass_sheet {
+            width: 100%;
+            bottom: 15px;
+        }
+
+        #brochure-banner-home-1 .grey-training-options {
+            color: #747474;
+            width: 70%;
+            padding-top: 5px;
+        }
+
+        #brochure-banner-home-1 #grey_blob {
+            display: none;
+        }
+
+        #brochure-banner-home-1 #orange_blob {
+            display: none;
+        }
+
+        #brochure-banner-home-1 #red_blob {
+            display: none;
+        }
+
+        #brochure-banner-home-1 #eye {
+            display: none;
+        }
+
+    }
