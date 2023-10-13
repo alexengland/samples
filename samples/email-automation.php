@@ -1,6 +1,5 @@
 <?php
 
-
     namespace App\Controllers;
 
     require_once('/home/automate/app/ThirdParty/vendor/autoload.php');
