@@ -73,13 +73,13 @@
 
         if (!empty($transaction_id) AND !empty($response['result']) AND $response['result'] == '1') {
 
-            if (!empty($data['account_id'])) $this->events->log('account', $data['account_id'], 'Information', NULL, $log, FALSE, FALSE);
-            if (!empty($data['order_id'])) $this->events->log('order', $data['order_id'], 'Information', NULL, $log, FALSE, FALSE);
+            if (!empty($data['account_id'])) $this->events->log('account', $data['account_id'], 'Information', NULL, $log, false, false);
+            if (!empty($data['order_id'])) $this->events->log('order', $data['order_id'], 'Information', NULL, $log, false, false);
 
         } else {
 
-            if (!empty($data['account_id'])) $this->events->log('account', $data['account_id'], 'Warning', NULL, $log, FALSE, FALSE);
-            if (!empty($data['order_id'])) $this->events->log('order', $data['order_id'], 'Warning', NULL, $log, FALSE, FALSE);
+            if (!empty($data['account_id'])) $this->events->log('account', $data['account_id'], 'Warning', NULL, $log, false, false);
+            if (!empty($data['order_id'])) $this->events->log('order', $data['order_id'], 'Warning', NULL, $log, false, false);
 
         }
 

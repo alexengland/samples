@@ -115,8 +115,8 @@
         } catch (\Exception $error) {
 
             $log = 'Amazon Ingress Fail';
-            $this->events->log('system', null, 'Critical', NULL, $log, TRUE, TRUE);
-            return FALSE;
+            $this->events->log('system', null, 'Critical', NULL, $log, true, true);
+            return false;
 
         }
 

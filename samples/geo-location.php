@@ -35,7 +35,7 @@
             } catch (\Exception $error) {
 
                 $log = 'Geo lookup failed (' . $error . ')';
-                $this->events->log('system', null, 'Critical', NULL, $log, TRUE, TRUE);
+                $this->events->log('system', null, 'Critical', NULL, $log, true, true);
                 return $default;
 
             }

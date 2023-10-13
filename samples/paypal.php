@@ -131,8 +131,8 @@
     
             // SET SESSION STAMP
     
-            $process = $this->utilities->encryptValue('process', TRUE);
-            $cancel = $this->utilities->encryptValue('cancel', TRUE);
+            $process = $this->utilities->encryptValue('process', true);
+            $cancel = $this->utilities->encryptValue('cancel', true);
     
             $_SESSION['paypal_process'] = $process;
             $_SESSION['paypal_cancel'] = $cancel;
@@ -159,7 +159,7 @@
                     ' . $ex->getData()
                 ;
     
-                $this->events->log('system', null, 'Critical', NULL, $log, TRUE, TRUE);
+                $this->events->log('system', null, 'Critical', NULL, $log, true, true);
                 if (!empty($order['account_id'])) $this->events->log('account', $order['account_id'], 'Critical', NULL, $log, false, false);
                 if (!empty($order['id'])) $this->events->log('order', $order['id'], 'Critical', NULL, $log, false, false);
     
@@ -183,7 +183,7 @@
     
                 $log = 'PayPal payment in the amount of $' . $finaltotal . ' ' . $invoice['currency'] . ' for ' . $order['summary'] . ' (' . $order['id'] . ') could not be processed due to PayPal website failure (PayPal servers did not responding correctly).';
     
-                $this->events->log('system', null, 'Critical', NULL, $log, TRUE, TRUE);
+                $this->events->log('system', null, 'Critical', NULL, $log, true, true);
                 if (!empty($order['account_id'])) $this->events->log('account', $order['account_id'], 'Critical', NULL, $log, false, false);
                 if (!empty($order['id'])) $this->events->log('order', $order['id'], 'Critical', NULL, $log, false, false);
     
